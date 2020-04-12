@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module'
 
 import { SharedModule } from './shared/shared.module';
 import { ModalComponent } from './modal/modal.component';
+import { RefDirective } from './rf.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ModalComponent } from './modal/modal.component';
     AppComponent,
     HomePageComponent,
     ModalComponent,
+    RefDirective
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { ModalComponent } from './modal/modal.component';
     SharedModule
   ],
   providers: [],
+  entryComponents:[ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
