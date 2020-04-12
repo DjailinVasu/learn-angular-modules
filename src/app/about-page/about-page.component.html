@@ -1,6 +1,6 @@
-<h1 appColor>{{ 'About page' | pageName }}</h1>
+<h1 appColor class="display-3 mb-4">{{ 'About page' | pageName }}</h1>
 
-<button class="btn" (click)="read = true">Mark as read</button>
+<button class="btn btn-outline-info mb-4" (click)="read = true">Mark as read</button>
 <p [ngStyle]="{color: read ? 'blue' : null}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sit.</p>
 
 <p><a [routerLink]="['/about', 'extra']">Show more...</a></p>
