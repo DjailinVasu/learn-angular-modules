@@ -1,6 +1,7 @@
 import { Component, OnInit, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { RefDirective } from '../rf.directive';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +12,17 @@ export class HomePageComponent implements OnInit {
 
   @ViewChild(RefDirective) refDir: RefDirective;
 
-  constructor(private resolver: ComponentFactoryResolver ) { }
+  constructor(
+    private resolver: ComponentFactoryResolver,
+    private title: Title,
+    private meta: Meta
+    ) {
+      this.title.setTitle('Home Page');
+      this.meta.addTags([
+        {name: 'keywords', content: 'angular, learn, tags'},
+        {name: 'discription', content: 'This is Home Page'}
+      ])
+    }
 
   ngOnInit() {
   }

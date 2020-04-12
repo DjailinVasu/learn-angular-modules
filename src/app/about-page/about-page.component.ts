@@ -1,4 +1,5 @@
 import {Component} from '@angular/core'
+import { Title } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-about-page',
@@ -7,4 +8,10 @@ import {Component} from '@angular/core'
 })
 export class AboutPageComponent {
   read = false
+
+  constructor(
+    private title: Title,
+  ) {
+    this.title.setTitle('About Page');
+  }
 }
