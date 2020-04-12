@@ -1,0 +1,21 @@
+
+<div class="modal-backdrop"></div>
+
+<div class="modal modal-open">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> {{title}} </h5>
+        <button type="button" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="close.emit()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

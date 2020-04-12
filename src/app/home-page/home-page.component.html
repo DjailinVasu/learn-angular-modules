@@ -1,3 +1,7 @@
 <h1 appColor class="display-3 mb-4">{{ 'Home page' | pageName }}</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis impedit laborum, libero nulla sequi similique tempore. Expedita, inventore repellendus!</p>
+
+<button class="btn btn-secondary" (click)="modal = true">Show modal</button>
+
+<app-modal *ngIf="modal" (close)="modal = false" title="Home Page Modal"></app-modal>
